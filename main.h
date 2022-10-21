@@ -1,5 +1,7 @@
-#include <stdio.h>
-#include <stdlib.h>
+#ifndef MAIN_H
+#define MAIN_H
+
+int _printf(const char *format, ...);
 
 /**
  * struct specifier - a format specifier
@@ -11,14 +13,15 @@
  */
 typedef struct specifier
 {
-	char *print_char;
-	char *print_str;
-	char print_percent;
-	float print_decimal;
-	int print_integer;
+        char *print_char;
+        char *print_str;
+        char print_percent;
+        float print_decimal;
+        int print_integer;
 } spec;
 
 int main(void)
 {
-	spec = {"%c", "%s", "%%", "%d", "%i"};
-}
+        spec = {"%c", "%s", "%%", "%d", "%i"};
+
+#endif
